@@ -7,6 +7,11 @@ module Jekyll
       return str.gsub(regex, value_replace)
     end
 
+    def regex_replace_multiline(str, regex_search, value_replace)
+      regex = /#{regex_search}/m
+      return str.gsub(regex, value_replace)
+    end
+  
     def regex_replace_once(str, regex_search, value_replace)
       regex = /#{regex_search}/
       return str.sub(regex, value_replace)
